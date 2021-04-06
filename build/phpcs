@@ -1,0 +1,23 @@
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 7 | ERROR | [x] Header blocks must not contain blank lines
+ 9 | ERROR | [x] Header blocks must not contain blank lines
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Router/Router.php
+--------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------
+ 76 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+Time: 169ms; Memory: 6MB
+
