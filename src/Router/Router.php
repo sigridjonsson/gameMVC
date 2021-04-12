@@ -58,10 +58,10 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
-        } else if ($method === "GET" && $path === "/dice") {
-            $callable = new Game();
-            $callable->welcome();
-            return;
+        // } else if ($method === "GET" && $path === "/dice") {
+        //     $callable = new Game();
+        //     $callable->welcome();
+        //     return;
         } else if ($method === "POST" && $path === "/dice") {
             if ($_POST["diceChoice"] == "one") {
                 $_SESSION["diceNr"] = $_POST["diceChoice"];

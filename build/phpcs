@@ -10,14 +10,14 @@ PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 
-FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Router/Router.php
---------------------------------------------------------------------------
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Dicegame.php
+--------------------------------------------------------------------------------
 FOUND 1 ERROR AFFECTING 1 LINE
---------------------------------------------------------------------------
- 76 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 10 | ERROR | [x] Header blocks must not contain blank lines
+--------------------------------------------------------------------------------
 PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
-Time: 169ms; Memory: 6MB
+Time: 248ms; Memory: 6MB
 
