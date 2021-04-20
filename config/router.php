@@ -30,6 +30,8 @@ $router->addGroup("/some", function (RouteCollector $router) {
     $router->addRoute("GET", "/where", ["\sigridjonsson\Controller\Sample", "where"]);
 });
 
+
+// 21
 $router->addGroup("/dice", function (RouteCollector $router) {
     $router->addRoute("GET", "", ["\sigridjonsson\Controller\Dicegame", "welcome"]);
     $router->addRoute("POST", "", ["\sigridjonsson\Controller\Dicegame", "postGame"]);
@@ -41,3 +43,11 @@ $router->addGroup("/diceGame", function (RouteCollector $router) {
 });
 
 $router->addRoute("GET", "/diceRes", ["\sigridjonsson\Controller\Dicegame", "resGame"]);
+
+
+
+// YATZY
+$router->addRoute("GET", "/yatzy", ["\sigridjonsson\Controller\Yatzy", "welcome"]);
+
+$router->addRoute("GET", "/yatzyGame", ["\sigridjonsson\Controller\Yatzy", "playGame"]);
+$router->addRoute("POST", "/yatzyGame", ["\sigridjonsson\Controller\Yatzy", "postRes"]);

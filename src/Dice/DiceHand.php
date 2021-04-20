@@ -3,17 +3,20 @@
 declare(strict_types=1);
 
 namespace sigridjonsson\Dice;
+use sigridjonsson\Dice\Dice;
 
 /**
  * Class DiceHand.
  */
 class DiceHand
 {
-    public $nrOfDices;
+    private $nrOfDices;
     private $dices;
     private $sum;
+    private $roll = 0;
+    private $arrayDices = [];
 
-    public function __construct(int $nrOfDices = 1)
+    public function __construct(int $nrOfDices = 4)
     {
         $this->nrOfDices = $nrOfDices;
 
@@ -22,12 +25,24 @@ class DiceHand
         }
     }
 
-    public function roll(): void
+    public function setNrDices(int $nrDices): void
+    {
+        $this->nrOfDices = $nrDices;
+    }
+
+    public function roll(): array
     {
         $this->sum = 0;
-        for ($i = 0; $i <= $this->nrOfDices; $i++) {
-            $this->sum += $this->dices[$i]->roll();
+        // var_dump(count($this->dices));
+        // var_dump($this->nrOfDices);
+        for ($i = 0; $i < count($this->dices); $i++) {
+            // $this->dices[$i]->roll();
+            // var_dump($this->dices[$i]);
+            // var_dump($this->dices);
+            $this->arrayDices[] = $this->dices[$i]->roll();
         }
+        var_dump($this->arrayDices);
+        return $this->arrayDices;
     }
 
     public function getLastRoll(): string
