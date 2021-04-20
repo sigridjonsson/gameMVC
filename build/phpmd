@@ -1,4 +1,7 @@
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Dicegame.php:43	Avoid unused local variables such as '$psr17Factory'.
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Dicegame.php:96	Avoid unused local variables such as '$psr17Factory'.
-/Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Router/Router.php:23	The method dispatch() has a Cyclomatic Complexity of 27. The configured cyclomatic complexity threshold is 10.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php:49	The method playGame() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php:49	The method playGame() has an NPath complexity of 256. The configured NPath complexity threshold is 200.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php:130	Avoid unused local variables such as '$psr17Factory'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php:36	Avoid using sigridjonsson\Dice\count() function in for loops.

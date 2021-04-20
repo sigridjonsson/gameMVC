@@ -55,6 +55,8 @@ class Yatzy
 
         $diceGraph = new GraphicalDice();
 
+        $result = [];
+
 
         if ($_SESSION["dice1"]) {
             $displayDice = $diceGraph->roll();

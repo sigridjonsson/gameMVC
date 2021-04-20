@@ -13,7 +13,7 @@ class DiceHand
     private $nrOfDices;
     private $dices;
     private $sum;
-    private $roll = 0;
+    // private $roll = 0;
     private $arrayDices = [];
 
     public function __construct(int $nrOfDices = 4)
@@ -33,15 +33,10 @@ class DiceHand
     public function roll(): array
     {
         $this->sum = 0;
-        // var_dump(count($this->dices));
-        // var_dump($this->nrOfDices);
         for ($i = 0; $i < count($this->dices); $i++) {
-            // $this->dices[$i]->roll();
-            // var_dump($this->dices[$i]);
-            // var_dump($this->dices);
             $this->arrayDices[] = $this->dices[$i]->roll();
         }
-        var_dump($this->arrayDices);
+        // var_dump($this->arrayDices);
         return $this->arrayDices;
     }
 

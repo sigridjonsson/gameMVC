@@ -10,7 +10,7 @@ $header = $header ?? null;
 $message = $message ?? null;
 
 if ($_SESSION["section"] < 7) {
-?>
+    ?>
 <h1>Samla på <?= $_SESSION["section"] ?>:or</h1>
 <p>Klicka i de tärningar du vill spara!</p>
 <p>Du får kasta tärningarna 3 gånger.
@@ -46,7 +46,7 @@ if ($_SESSION["rounds"] < 3 && $_SESSION["section"] < 7) {
         <input type="submit" name="btn" value="Slå igen!">
     </form>
 <?php }
-    if ($_SESSION["rounds"] == 3 && $_SESSION["section"] == 6) {
+if ($_SESSION["rounds"] == 3 && $_SESSION["section"] == 6) {
     ?><form method="POST">
         <input type="submit" name="btn" value="Resultat!">
     </form>

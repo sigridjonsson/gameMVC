@@ -10,6 +10,16 @@ PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php
+--------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------
+ 5 | ERROR | [x] Header blocks must be separated by a single blank line
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+
 FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Dicegame.php
 --------------------------------------------------------------------------------
 FOUND 1 ERROR AFFECTING 1 LINE
@@ -19,5 +29,15 @@ FOUND 1 ERROR AFFECTING 1 LINE
 PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------------
 
-Time: 248ms; Memory: 6MB
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php
+-----------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------
+ 9 | ERROR | [x] Header blocks must not contain blank lines
+-----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------
+
+Time: 187ms; Memory: 8MB
 
