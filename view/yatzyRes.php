@@ -9,7 +9,7 @@ declare(strict_types=1);
 $header = $header ?? null;
 $message = $message ?? null;
 ?>
+<h1>Resultat</h1>
 
-<h2>YATZY!</h2>
-
-<a href="yatzyGame">Tryck här för att spela Yatzy!</a>
+<h3><?= $data["message"] ?></h3>
+<h4>Din poäng: <?= $_SESSION["scoreYatzy"] ?></h4>

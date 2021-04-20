@@ -19,6 +19,7 @@ main {
 
 .dice-utf8 {
     font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .dice-sprite {
@@ -42,4 +43,12 @@ footer {
     margin-top: 20px;
     min-height: 4em;
     text-align: center;
+}
+
+
+#diceTwo,
+#diceThree,
+#diceFour,
+#diceFive {
+    margin-left: 9px;
 }

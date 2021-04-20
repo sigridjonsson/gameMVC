@@ -28,6 +28,8 @@ class Yatzy
         $psr17Factory = new Psr17Factory();
 
         $_SESSION["rounds"] = 0;
+        $_SESSION["section"] = 1;
+        $_SESSION["scoreYatzy"] = 0;
 
         $_SESSION["dice1"] = true;
         $_SESSION["dice2"] = true;
@@ -81,6 +83,7 @@ class Yatzy
         }
 
 
+
         $_SESSION["listOfDices"] = [];
         array_push($_SESSION["listOfDices"], $_SESSION["dice1Val"], $_SESSION["dice2Val"], $_SESSION["dice3Val"], $_SESSION["dice4Val"], $_SESSION["dice5Val"]);
 
@@ -89,6 +92,27 @@ class Yatzy
         $_SESSION["dice3"] = true;
         $_SESSION["dice4"] = true;
         $_SESSION["dice5"] = true;
+
+
+        $resDices = [];
+        if ($_SESSION["rounds"] == 4) {
+            $_SESSION["rounds"] = 1;
+            $_SESSION["section"] += 1;
+        } else if ($_SESSION["rounds"] == 3) {
+            $resDices = $_SESSION["listOfDices"];
+            $dices = [];
+            foreach ($resDices as $value) {
+                $dices[] = intval(substr($value, -1, 1));
+            }
+
+            foreach ($dices as $value) {
+                if ($value == $_SESSION["section"]) {
+                    $_SESSION["scoreYatzy"] += $value;
+                }
+            }
+        }
+
+
 
 
         $body = renderView("layout/yatzyGame.php");
@@ -104,28 +128,50 @@ class Yatzy
         $psr17Factory = new Psr17Factory();
 
 
-        if ($_POST["btn"] == "Slå igen!" && isset($_POST["diceOne"])) {
+        if (isset($_POST["diceOne"])) {
             $_SESSION["dice1"] = false;
-            redirectTo(url("/yatzyGame"));
         }
-        if ($_POST["btn"] == "Slå igen!" && isset($_POST["diceTwo"])) {
+        if (isset($_POST["diceTwo"])) {
             $_SESSION["dice2"] = false;
-            redirectTo(url("/yatzyGame"));
         }
-        if ($_POST["btn"] == "Slå igen!" && isset($_POST["diceThree"])) {
+        if (isset($_POST["diceThree"])) {
             $_SESSION["dice3"] = false;
-            redirectTo(url("/yatzyGame"));
         }
-        if ($_POST["btn"] == "Slå igen!" && isset($_POST["diceFour"])) {
+        if (isset($_POST["diceFour"])) {
             $_SESSION["dice4"] = false;
-            redirectTo(url("/yatzyGame"));
         }
-        if ($_POST["btn"] == "Slå igen!" && isset($_POST["diceFive"])) {
+        if (isset($_POST["diceFive"])) {
             $_SESSION["dice5"] = false;
-            redirectTo(url("/yatzyGame"));
         }
-        redirectTo(url("/yatzyGame"));
+
+        if ($_POST["btn"] == "Slå igen!") {
+            redirectTo(url("/yatzyGame"));
+        } else if ($_POST["btn"] == "Resultat!") {
+            redirectTo(url("/yatzyRes"));
+        }
 
         return;
+    }
+
+    public function resGame(): ResponseInterface
+    {
+        $psr17Factory = new Psr17Factory();
+
+        $data = [];
+
+        if ($_SESSION["scoreYatzy"] >= 63) {
+            $_SESSION["scoreYatzy"] += 50;
+            $data["message"] = "Grattis! Du samlade ihop 63 poäng eller mer
+            och har därför gjort dig förtjänt av bonusen på 50 poäng.";
+        } else if ($_SESSION["scoreYatzy"] < 63) {
+            $data["message"] = "Grattis!";
+        }
+
+
+        $body = renderView("layout/yatzyRes.php", $data);
+
+        return $psr17Factory
+            ->createResponse(200)
+            ->withBody($psr17Factory->createStream($body));
     }
 }

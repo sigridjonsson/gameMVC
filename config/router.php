@@ -51,3 +51,5 @@ $router->addRoute("GET", "/yatzy", ["\sigridjonsson\Controller\Yatzy", "welcome"
 
 $router->addRoute("GET", "/yatzyGame", ["\sigridjonsson\Controller\Yatzy", "playGame"]);
 $router->addRoute("POST", "/yatzyGame", ["\sigridjonsson\Controller\Yatzy", "postRes"]);
+
+$router->addRoute("GET", "/yatzyRes", ["\sigridjonsson\Controller\Yatzy", "resGame"]);
