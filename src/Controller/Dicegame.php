@@ -30,6 +30,8 @@ class Dicegame
         $_SESSION["total"] = 0;
         $_SESSION["win"] = $_SESSION["win"] ?? 0;
         $_SESSION["winComp"] = $_SESSION["winComp"] ?? 0;
+        $_SESSION["diceNr"] = $_SESSION["diceNr"] ?? null;
+        $_SESSION["class"] = $_SESSION["class"] ?? null;
 
         $body = renderView("layout/dice.php");
 
@@ -83,8 +85,8 @@ class Dicegame
             $_SESSION["total"] += array_sum($res);
         }
 
-        $data["class"] = $class;
-        $body = renderView("layout/diceGame.php", $data);
+        $_SESSION["class"] = $class;
+        $body = renderView("layout/diceGame.php");
 
         return $psr17Factory
             ->createResponse(200)

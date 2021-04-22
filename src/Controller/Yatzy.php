@@ -101,13 +101,12 @@ class Yatzy
             $_SESSION["rounds"] = 1;
             $_SESSION["section"] += 1;
         } else if ($_SESSION["rounds"] == 3) {
-            $resDices = $_SESSION["listOfDices"];
-            $dices = [];
-            foreach ($resDices as $value) {
-                $dices[] = intval(substr($value, -1, 1));
+            $_SESSION["dices"] = [];
+            foreach ($_SESSION["listOfDices"] as $value) {
+                $_SESSION["dices"][] = intval(substr($value, -1, 1));
             }
 
-            foreach ($dices as $value) {
+            foreach ($_SESSION["dices"] as $value) {
                 if ($value == $_SESSION["section"]) {
                     $_SESSION["scoreYatzy"] += $value;
                 }

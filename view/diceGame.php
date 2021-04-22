@@ -13,7 +13,7 @@ $message = $message ?? null;
 if ($_SESSION["total"] < 21) {
     ?>
     <p class="dice-utf8">
-    <?php foreach ($data["class"] as $value) : ?>
+    <?php foreach ($_SESSION["class"] as $value) : ?>
         <i class="<?= $value ?>"></i>
     <?php endforeach; ?>
     </p>

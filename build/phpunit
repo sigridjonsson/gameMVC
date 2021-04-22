@@ -1,62 +1,11 @@
-
-
-// declare(strict_types=1);
-//
-// namespace Mos\Controller;
-//
-// use PHPUnit\Framework\TestCase;
-// use Psr\Http\Message\ResponseInterface;
-
-/**
- * Test cases for the controller Form.
- */
-// class ControllerFormTest extends TestCase
-// {
-//     /**
-//      * Try to create the controller class.
-//      */
-//     public function testCreateTheControllerClass()
-//     {
-//         $controller = new Form();
-//         $this->assertInstanceOf("\Mos\Controller\Form", $controller);
-//     }
-//
-//     /**
-//      * Check the controller action.
-//      * @runInSeparateProcess
-//      */
-//     public function testControllerViewAction()
-//     {
-//         $controller = new Form();
-//
-//         $exp = "\Psr\Http\Message\ResponseInterface";
-//         $res = $controller->view();
-//         $this->assertInstanceOf($exp, $res);
-//     }
-
-
-
-    /**
-    * Check the controller action.
-     * @runInSeparateProcess
-     */
-//     public function testControllerProcessAction()
-//     {
-//         $controller = new Form();
-//
-//         $exp = "\Psr\Http\Message\ResponseInterface";
-//         $res = $controller->process();
-//         $this->assertInstanceOf($exp, $res);
-//     }
-// }
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-......................                                            22 / 22 (100%)
+....................................                              36 / 36 (100%)
 
-Time: 00:00.942, Memory: 18.00 MB
+Time: 00:01.235, Memory: 22.00 MB
 
-OK (22 tests, 23 assertions)
+OK (36 tests, 38 assertions)
 
-Generating code coverage report in Clover XML format ... done [00:00.103]
+Generating code coverage report in Clover XML format ... done [00:00.053]
 
-Generating code coverage report in HTML format ... done [00:00.085]
+Generating code coverage report in HTML format ... done [00:00.070]
