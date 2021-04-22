@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace sigridjonsson\Controller;
+namespace Mos\Controller;
 
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\Stream;
 use Psr\Http\Message\ResponseInterface;
 
-use function sigridjonsson\Functions\renderView;
+use function Mos\Functions\renderView;
 
 /**
  * Controller for the debug route.

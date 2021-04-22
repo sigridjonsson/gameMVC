@@ -12,7 +12,7 @@ use sigridjonsson\Dice\GraphicalDice;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 
-use function sigridjonsson\Functions\{
+use function Mos\Functions\{
     redirectTo,
     renderView,
     url

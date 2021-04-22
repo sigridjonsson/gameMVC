@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-use function sigridjonsson\Functions\{
+use function Mos\Functions\{
     getBaseUrl,
     getCurrentUrl,
     getRoutePath
