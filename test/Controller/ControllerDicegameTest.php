@@ -24,67 +24,66 @@ class ControllerDicegameTest extends TestCase
     /**
      * Check that the controller returns a response.
      */
-     public function testControllerWelcomeReturnsResponse()
-     {
-         $controller = new Dicegame();
+    public function testControllerWelcomeReturnsResponse()
+    {
+        $controller = new Dicegame();
 
-         $exp = "\Psr\Http\Message\ResponseInterface";
-         $res = $controller->welcome();
-         $this->assertInstanceOf($exp, $res);
-     }
+        $exp = "\Psr\Http\Message\ResponseInterface";
+        $res = $controller->welcome();
+        $this->assertInstanceOf($exp, $res);
+    }
 
      /**
       * Check that the controller returns a response.
       */
-      public function testControllerPlayGameReturnsResponse()
-      {
-          $controller = new Dicegame();
+    public function testControllerPlayGameReturnsResponse()
+    {
+        $controller = new Dicegame();
 
-          $exp = "\Psr\Http\Message\ResponseInterface";
-          $res = $controller->playGame();
-          $this->assertInstanceOf($exp, $res);
-      }
+        $exp = "\Psr\Http\Message\ResponseInterface";
+        $res = $controller->playGame();
+        $this->assertInstanceOf($exp, $res);
+    }
 
       /**
        * Check that the controller returns a response.
        */
-       public function testControllerResGameReturnsResponse()
-       {
-           $controller = new Dicegame();
+    public function testControllerResGameReturnsResponse()
+    {
+        $controller = new Dicegame();
 
-           $exp = "\Psr\Http\Message\ResponseInterface";
-           $res = $controller->resGame();
-           $this->assertInstanceOf($exp, $res);
-       }
+        $exp = "\Psr\Http\Message\ResponseInterface";
+        $res = $controller->resGame();
+        $this->assertInstanceOf($exp, $res);
+    }
 
        /**
         * Check that playGame() returns one dice if $_SESSION["diceNr"] = "one".
         */
-        public function testControllerPlayGameOneDice()
-        {
-            $controller = new Dicegame();
+    public function testControllerPlayGameOneDice()
+    {
+        $controller = new Dicegame();
 
-            $_SESSION["diceNr"] = "one";
-            $controller->playGame();
+        $_SESSION["diceNr"] = "one";
+        $controller->playGame();
 
-            $exp = 1;
-            $res = count($_SESSION["class"]);
-            $this->assertSame($exp, $res);
-        }
+        $exp = 1;
+        $res = count($_SESSION["class"]);
+        $this->assertSame($exp, $res);
+    }
 
         /**
          * Check that playGame() returns two dices if $_SESSION["diceNr"] = "two".
          */
-         public function testControllerPlayGameTwoDices()
-         {
-             $controller = new Dicegame();
+    public function testControllerPlayGameTwoDices()
+    {
+        $controller = new Dicegame();
 
-             $_SESSION["diceNr"] = "two";
-             $controller->playGame();
+        $_SESSION["diceNr"] = "two";
+        $controller->playGame();
 
-             $exp = 2;
-             $res = count($_SESSION["class"]);
-             $this->assertSame($exp, $res);
-         }
-
+        $exp = 2;
+        $res = count($_SESSION["class"]);
+        $this->assertSame($exp, $res);
+    }
 }

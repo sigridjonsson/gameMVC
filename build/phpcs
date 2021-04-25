@@ -1,0 +1,42 @@
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/test/Controller/ControllerFormTest.php
+-------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-------------------------------------------------------------------------------------------
+ 12 | ERROR | [x] Header blocks must be separated by a single blank line
+-------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php
+--------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------
+ 5 | ERROR | [x] Header blocks must be separated by a single blank line
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Dicegame.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 10 | ERROR | [x] Header blocks must not contain blank lines
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php
+-----------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------
+ 9 | ERROR | [x] Header blocks must not contain blank lines
+-----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------
+
+Time: 519ms; Memory: 8MB
+
