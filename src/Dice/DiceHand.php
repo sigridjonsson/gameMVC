@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace sigridjonsson\Dice;
+
 use sigridjonsson\Dice\Dice;
 
 /**
@@ -25,7 +26,8 @@ class DiceHand
 
     public function roll(): array
     {
-        for ($i = 0; $i < count($this->dices); $i++) {
+        $count = count($this->dices);
+        for ($i = 0; $i < $count; $i++) {
             $this->arrayDices[] = $this->dices[$i]->roll();
         }
         return $this->arrayDices;

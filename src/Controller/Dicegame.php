@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace sigridjonsson\Controller;
 
-// use sigridjonsson\Dice\Game;
-
 use sigridjonsson\Dice\Dice;
 use sigridjonsson\Dice\GraphicalDice;
-
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 
@@ -42,8 +39,6 @@ class Dicegame
 
     public function postGame(): void
     {
-        $psr17Factory = new Psr17Factory();
-
         if ($_POST["diceChoice"] == "one") {
             $_SESSION["diceNr"] = $_POST["diceChoice"];
             redirectTo(url("/diceGame"));
@@ -64,8 +59,6 @@ class Dicegame
     public function playGame(): ResponseInterface
     {
         $psr17Factory = new Psr17Factory();
-
-        $data = [];
 
         $diceGraph = new GraphicalDice();
         $res = [];
@@ -95,8 +88,6 @@ class Dicegame
 
     public function postRes(): void
     {
-        $psr17Factory = new Psr17Factory();
-
         if ($_POST["btn"] == "Stanna!") {
             redirectTo(url("/diceRes"));
         } else if ($_POST["btn"] == "Slå igen!") {

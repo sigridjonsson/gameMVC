@@ -7,8 +7,6 @@ namespace sigridjonsson\Controller;
 use sigridjonsson\Dice\GraphicalDice;
 use sigridjonsson\Dice\DiceHand;
 use sigridjonsson\Dice\Dice;
-
-
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 
@@ -95,8 +93,6 @@ class Yatzy
         $_SESSION["dice4"] = true;
         $_SESSION["dice5"] = true;
 
-
-        $resDices = [];
         if ($_SESSION["rounds"] == 4) {
             $_SESSION["rounds"] = 1;
             $_SESSION["section"] += 1;
@@ -126,9 +122,6 @@ class Yatzy
 
     public function postRes(): void
     {
-        $psr17Factory = new Psr17Factory();
-
-
         if (isset($_POST["diceOne"])) {
             $_SESSION["dice1"] = false;
         }
