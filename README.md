@@ -1,6 +1,6 @@
 # gameMVC
 
-[![Build Status](https://travis-ci.org/sigridjonsson/gameMVC.svg?branch=main)](https://travis-ci.org/sigridjonsson/gameMVC)
+[![Build Status](https://travis-ci.com/sigridjonsson/gameMVC.svg?branch=main)](https://travis-ci.com/sigridjonsson/gameMVC)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sigridjonsson/gameMVC/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/sigridjonsson/gameMVC/?branch=main)
 [![Code Coverage](https://scrutinizer-ci.com/g/sigridjonsson/gameMVC/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/sigridjonsson/gameMVC/?branch=main)
